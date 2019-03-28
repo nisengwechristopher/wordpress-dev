@@ -1,0 +1,10 @@
+<?php
+    get_header();
+    get_template_part('templates/masthead');
+    get_template_part('templates/about');
+    get_template_part('templates/services');
+    get_template_part('templates/portfolio');
+    get_template_part('templates/action');
+    get_template_part('templates/contact');
+    get_footer();
+?>

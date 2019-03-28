@@ -1,0 +1,81 @@
+body{
+  background-color: #f4623a17;
+}
+
+/* on template contact.php */
+#contact {
+  background-color: #ffffff;
+}
+
+/* single.php */
+.content {
+    margin-top: 3%;
+}
+
+/* mostly yassine's code */
+.single-post-container {
+  margin-top: 106px;
+}
+
+.post-thumbnail {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 40px;
+}
+
+.page-banner {
+  background-size: cover;
+  background-position: center;
+  display: flow-root;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-banner h1 {
+  text-align: center;
+  color: white;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  padding-right: 15rem;
+  background-size: cover;
+}
+
+/* page.php */
+.portfolio-link {
+  margin: 3% 0 3% 3%;
+}
+/* page.php */
+.creativeText{
+    display: -webkit-box;
+    width: 30vw;
+}
+
+/* page.php */
+.portfolio-link div img{
+    height: 200px;
+    width: 200px;
+}
+
+/* search.php & archive.php*/ 
+.li_hover:hover {
+  background-color: #ff260098;
+}
+
+
+/* style pour la page d'erreurs : 404.php*/
+#page_error {
+  width: 100vw;
+  height: 87.5vh;
+  background-color: #ff4411f7;
+  text-align: center;
+}
+#page_error header{
+  position: fixed;
+}
+#page_error h1{
+padding-top: 20rem;
+font-size: 8rem;
+}
+#page_error p{
+  margin-top: 3rem;
+}
