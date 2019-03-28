@@ -3,7 +3,7 @@
  * Plugin Name: First plugin - Creative Theme
  * Author: Nisengwe christopher
  * Description: The following plugin is made by following the instructions from WP site "https://developer.wordpress.org/plugins/intro/" and Yassine Kharchaf's commits "https://github.com/yassinekharchaf/wpdevplugincoach/tree/hookfile". Plugin pour créer des recettes
- *
+ * @since 0.1.0
  * Version: 0.1.0
  * !! https://developer.wordpress.org/plugins/plugin-basics/header-requirements/
  * 
@@ -23,12 +23,8 @@ function ajout_du_short_code() {
 }
 add_shortcode( 'code', 'ajout_du_short_code' );
 
-/*****************************
- * ************************************************* */
-
-
-
-use App\Features\PostTypes\PersoPostType;
+/***************************** Suivant les commits de Yassine
+ * ******************************************************** */
 
 // /**
 //  * Fonction pour ajouter un type de contenu recette.
@@ -46,6 +42,10 @@ use App\Features\PostTypes\PersoPostType;
 // add_action('init', 'register_perso_post_type');
 
 
+use App\Features\PostTypes\PersoPostType;
+use App\Features\Taxonomies\PersoTaxonomy;
+
 /** permet de utiliser la fonction « autoload » afin de charger les fichiers automatiquement */
 require_once('autoload.php');
-add_action('init', PersoPostType::class, 'perso');
+add_action('init', [PersoPostType::class, 'perso']);
+add_actiion(init, [PersoTaxonomy::class, 'perso']);
