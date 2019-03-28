@@ -2,9 +2,11 @@
 
 namespace App\Features\PostType;
 
-class RecipePostType {
+class PersoPostType {
+    public static $slug = 'perso';
+
     public static function register () {
-        register_post_type('recipe', [
+        register_post_type (self::$slug, [
             'public' => true,// affichage public dans le menu 
             'has_archive' => true,
             'public' => true,// affichage public dans le menu 

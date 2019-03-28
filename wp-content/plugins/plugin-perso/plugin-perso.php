@@ -28,7 +28,7 @@ add_shortcode( 'code', 'ajout_du_short_code' );
 
 
 
-use App\Features\PostTypes\RecipePostType;
+use App\Features\PostTypes\PersoPostType;
 
 // /**
 //  * Fonction pour ajouter un type de contenu recette.
@@ -48,4 +48,4 @@ use App\Features\PostTypes\RecipePostType;
 
 /** permet de utiliser la fonction « autoload » afin de charger les fichiers automatiquement */
 require_once('autoload.php');
-add_action('init', RecipePostType::class, 'perso');
+add_action('init', PersoPostType::class, 'perso');
