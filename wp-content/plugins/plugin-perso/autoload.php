@@ -7,4 +7,4 @@ function simplarity_autoloader($class_name)
     $class_file = str_replace('\\', DIRECTORY_SEPARATOR, $class_name) . '.php';
     require_once $classes_dir . $class_file;
   }
-} 
+}
