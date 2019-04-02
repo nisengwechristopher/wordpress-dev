@@ -1,6 +1,8 @@
 <?php
 
-class PersoPostTypes {
+namespace App\Features\PostTypes;
+
+class PersoPostType {
     public static function register() {
         register_post_type('perso',
         [

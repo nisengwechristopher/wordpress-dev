@@ -9,5 +9,5 @@
  */
 
 
-require_once(App/Features/PostTypes/PErsoPostTypes.php);
-add_action('init','register_post_type_perso');
+require_once(App\Features\PostTypes\PersoPostType.php);
+add_action('init',[App\Features\PostTypes\PersoPostType::class],'register');
