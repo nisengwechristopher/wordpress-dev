@@ -8,6 +8,7 @@
  * Version: 0.1.0
  */
 
+use App\Features\PostTypes\PersoPostType as PersoPostType;
 
 require_once(App\Features\PostTypes\PersoPostType.php);
-add_action('init',[App\Features\PostTypes\PersoPostType::class],'register');
+add_action('init',[PersoPostType::class,'register']);
