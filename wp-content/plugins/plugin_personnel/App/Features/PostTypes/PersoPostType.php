@@ -9,6 +9,9 @@ class PersoPostType {
         [
             'public' => true,
             'has_archive' => 'true',
+            'menu_icon' => 'dashicons-smiley',
+            'taxonomies' => ['category','post_tag'],
+            'rewrite' => ['slug' => 'info'],
             'labels' => [
                 'name' => 'Informations',
                 'singular_name' => 'Information',
@@ -33,9 +36,6 @@ class PersoPostType {
                 'item_scheduled' => __('Information planifiée.'),
                 'item_updated' =>__('Information mise à jours.'),
             ],
-            'rewrite' => [
-                'slug' => 'info',
-            ]
         ]
         );
     }
