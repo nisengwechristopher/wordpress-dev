@@ -10,7 +10,7 @@ class PersoPostType {
             'public' => true,
             'has_archive' => 'true',
             'menu_icon' => 'dashicons-smiley',
-            'taxonomies' => ['category','post_tag'],
+            'taxonomies' => ['category'], //Ajout de taxonimies afin de pouvoir trier les informations selon des filtres pertinantes (selon le besoin du client)
             'rewrite' => ['slug' => 'info'],
             'labels' => [
                 'name' => 'Informations',
