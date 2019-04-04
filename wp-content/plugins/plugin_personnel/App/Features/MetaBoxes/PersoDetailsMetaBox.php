@@ -25,7 +25,6 @@ class PersoDetailsMetaBox {
          */
         public static function render()
         {
-            $path_racine = $_SERVER["DOCUMENT_ROOT"]; // chemin apt de la racine du projet.
-            include($path_racine . '/wp_theme_creative/wp-content/plugins/plugin_personnel/resources/views/metaboxes/perso-detail.html.php');
+            include(PERSO_VIEW_DIR . 'metaboxes/perso-detail.html.php');
         }
     }
