@@ -22,7 +22,7 @@ class PersoPostType {
                 'new_item' => __('Nouvelle information'),
                 'view_item' => __('Voir l\'information'),
                 'view_items' => __('Voir les informations'),
-                'search_items' => __('Rechercher des informations'),
+                'search_items' => __('Chercher des informations'),
                 'not_found' => __('Pas d\'informations trouvées.'),
                 'not_found_in_trash' =>('Pas d\'informations dans la corbeille.'),
                 'all_items' => __('Toutes les informations'),
@@ -36,6 +36,8 @@ class PersoPostType {
                 'item_scheduled' => __('Information planifiée.'),
                 'item_updated' =>__('Information mise à jours.'),
             ],
+             // On choisis dans supports ce qu'on veut rendre accessible dans notre post-type, un titre,un textarea,un extrait et la possibilité de rajouter une image mise en avant.
+            'supports' =>  ['title', 'editor', 'excerpt', 'thumbnail'],
         ]
         );
     }

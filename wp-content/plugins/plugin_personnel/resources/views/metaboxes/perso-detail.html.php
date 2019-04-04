@@ -1,0 +1,1 @@
+<h3>Ma metabox est crée</h3>
