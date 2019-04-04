@@ -19,6 +19,8 @@
 
 require_once('autoload.php'); // == require_once(App\Features\PostTypes\PersoPostType.php);
 require_once('env.php');
+require_once('helpers.php');
+
 
 add_action('init',[PersoPostType::class,'register']);
 add_action('init',[PersoTaxonomy::class, 'register']);

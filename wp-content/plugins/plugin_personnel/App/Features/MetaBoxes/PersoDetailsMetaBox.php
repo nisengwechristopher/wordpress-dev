@@ -25,6 +25,6 @@ class PersoDetailsMetaBox {
          */
         public static function render()
         {
-            include(PERSO_VIEW_DIR . 'metaboxes/perso-detail.html.php');
+            view('metaboxes/perso-detail');
         }
     }
