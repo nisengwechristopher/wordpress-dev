@@ -19,18 +19,33 @@ class PersoDetailsMetaBox {
         );
     }
     
+
+
+
     //fonction pour rendre le code html de la metabox se trouvant dans le fichier perso-detail.html.php grace à la fonction view dans le helper. 
     public static function render()
     {
-        view('metaboxes/perso-detail');
+        //récupération de toutes les metadata du post
+        $data = get_post_meta(get_the_ID());
+
+        // $time = $data['perso_time_information'][0];
+        $time = extract_data_attr('perso_time_information', $data); // "new" way to write the line above.
+
+        // utilisation de la function compact() .. elle crée un tableau qui associe un nom à une valeur.
+        // view('metaboxes/perso-detail',['type_info' => $time]);
+        view('metaboxes/perso-detail', compact('time')); // "new" way to write the line above.
+
     }
+
+
 
 
     //fonction pour sauvgrader la valeur qui sera enregistré dans le'input du formulaire.
     public static function save ($post_id) {
         if (count($_POST) != 0) {
-            $type_information= sanitize_post_field($_POST[rat_time_information]);
-            update_post_meta( $post_id,'rat_time_information', $type_information);
+            $name = $_POST[perso_time_information];
+            $type_information = sanitize_post_field($name);
+            update_post_meta($post_id, 'perso_time_information', $type_information);
         }
     }
 }
