@@ -30,10 +30,11 @@ class PersoDetailsMetaBox {
 
         // $time = $data['perso_time_information'][0];
         $time = extract_data_attr('perso_time_information', $data); // "new" way to write the line above.
+        $nbr_personne = extract_data_attr('rat_nbr_personne',$data);
 
         // utilisation de la function compact() .. elle crée un tableau qui associe un nom à une valeur.
         // view('metaboxes/perso-detail',['type_info' => $time]);
-        view('metaboxes/perso-detail', compact('time')); // "new" way to write the line above.
+        view('metaboxes/perso-detail', compact('time','nbr_personne')); // "new" way to write the line above.
 
     }
 
@@ -46,6 +47,10 @@ class PersoDetailsMetaBox {
             $name = $_POST[perso_time_information];
             $type_information = sanitize_post_field($name);
             update_post_meta($post_id, 'perso_time_information', $type_information);
+
+
+            $nbr_personne = sanitize_text_field($_POST['rat_nbr_personne']);
+            update_post_meta($post_id,'rat_nbr_personne', $nbr_personne);
         }
     }
 }
