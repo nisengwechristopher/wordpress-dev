@@ -18,13 +18,12 @@ class PersoDetailsMetaBox {
         );
     }
     
-        /**
-         * Fonction pour rendre le code html dans la metabox
-         *
-         * @return void
-         */
+        //Fonction pour rendre le code html de la metabox se trouvant dans le fichier perso-detail.html.php grace à la fonction view dans le helper. 
         public static function render()
         {
             view('metaboxes/perso-detail');
+        }
+        // fonction pour sauvgrader la valeur qui sera enregistré dans le'input du formulaire.
+        public static function save ($post_id) {
         }
     }
