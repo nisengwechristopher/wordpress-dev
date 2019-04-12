@@ -26,4 +26,14 @@ function extract_data_attr(string $key, array $data)
     return esc_attr($data[$key][0]);
   }
   return '';
-} 
+}
+
+
+
+// Cette function update_post_metas attends deux param. ($post_id et $data) qu'il reçoit de la function save du fichier RecipeDetailsMetabox.php comme je viens de la modifier.
+
+function update_post_metas($post_id,$data) {
+  foreach ($data as $key => $value) {
+    update_post($post_id, $key, $value);
+  }
+}
